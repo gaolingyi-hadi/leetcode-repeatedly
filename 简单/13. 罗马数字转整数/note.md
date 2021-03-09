@@ -2,7 +2,7 @@
 ## 思路
 先把字符串转成数组,再遍历转换成数字累加,这样先成功转换成数字
 ```js
- var romanToInt = function (s) {
+ var romanToInt1 = function (s) {
         const rome = {
             I: 1,
             V: 5,
@@ -46,7 +46,7 @@ if (arr[i] === 'I') {
 ```
 上述代码重复3遍可得最终通过代码
 ```js
-var romanToInt = function (s) {
+var romanToInt1 = function (s) {
     const rome = {
         I: 1,
         V: 5,
