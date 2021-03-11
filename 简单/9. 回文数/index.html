@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body></body>
+<script>
+    var isPalindrome = function (x) {
+        let num_arr = x.toString().split('')
+        let max = Math.floor(num_arr.length / 2);
+        for (let i = 0; i < max; i++) {
+            if (num_arr[i] != num_arr[num_arr.length - 1 - i]) { return false }
+        }
+        return true
+    };
+    var isPalindrome2 = function (x) {
+
+    }
+    // console.time("测试 fn2 速度")
+    // for (let i = 0; i < 1000000; i++) {
+    //     isPalindrome2(i)
+    // }
+    // console.timeEnd("测试 fn2 速度")
+    // console.time("测试 fn1 速度")
+    // for (let i = 0; i < 1000000; i++) {
+    //     isPalindrome(i)
+    // }
+    // console.timeEnd("测试 fn1 速度")
+
+
+    console.log(isPalindrome(-7463847412))
+</script>
+
+</html>
