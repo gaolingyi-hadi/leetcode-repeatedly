@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body></body>
+<script>
+    // -2147483648 , 2147483647
+
+
+    var reverse = function (x) {
+        let res = 0
+        let arr = x.toString().split('')
+        if (arr[0] == '-') {
+            arr.shift()
+            res = Number('-' + arr.reverse().join(""))
+        } else {
+            res = Number(arr.reverse().join(""))
+        }
+        if (Math.pow(-2, 31) > res || res > (Math.pow(2, 31) - 1)) return 0
+        return res
+    };
+
+    var reverse2 = function (x) {
+        const minus = `${x}`.includes('-');
+        let res = minus ? `${x}`.slice(1) : `${x}`;
+        res = res.split("").reverse().join("");
+        if (minus) { res *= -1 }
+        if (Math.pow(-2, 31) > res || res > (Math.pow(2, 31) - 1)) return 0
+        return res;
+    };
+
+    console.time("测试 fn2 速度")
+    for (let i = 0; i < 1000000; i++) {
+        reverse2(i)
+    }
+    console.timeEnd("测试 fn2 速度")
+    console.time("测试 fn1 速度")
+    for (let i = 0; i < 1000000; i++) {
+        reverse(i)
+    }
+    console.timeEnd("测试 fn1 速度")
+
+
+    // console.log(reverse2(-7463847412))
+</script>
+
+</html>
