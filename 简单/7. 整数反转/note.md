@@ -1,6 +1,7 @@
 # 7. 整数反转
 ## 思路
 把数字转成数组, 再用数组的`reverse()`反转, 最后判断正负号,并且值在范围内即可
+## 完整代码
 ```js
 var reverse = function (x) {
     let res = 0
@@ -18,6 +19,7 @@ var reverse = function (x) {
 ## 优化思路
 上述代码`if()`太影响读性了,并省去`x=0`这种情况
 
+## 最终代码
 ```js
 var reverse2 = function (x) {
     const minus = `${x}`.includes('-');
